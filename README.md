@@ -22,7 +22,7 @@ kind: SoftwareEngineer
 
 metadata:
   name:     jyothsna-devi-goru
-  location: Santa Clara, CA
+  location: United States
   degree:   M.S. Engineering Science (Artificial Intelligence)
             University at Buffalo
 
