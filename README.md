@@ -26,8 +26,6 @@ metadata:
   degree:   M.S. Engineering Science (Artificial Intelligence)
             University at Buffalo
 
-spec:
-  role: Software Engineer @ Capital One
 
   domains:
     - high-concurrency APIs and event-driven microservices
