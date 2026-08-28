@@ -2,7 +2,7 @@
 
 # Jyothsna Devi Goru
 
-**Software Engineer** &nbsp;·&nbsp; Distributed Systems &nbsp;·&nbsp; AI Engineering
+**Software Engineer** &nbsp;·&nbsp; Backend &nbsp;·&nbsp; Full-Stack &nbsp;·&nbsp; Cloud &nbsp;·&nbsp; AI
 
 *I build backend systems that stay fast, correct and observable once real traffic arrives.*
 
@@ -28,10 +28,10 @@ metadata:
 
 
   domains:
-    - high-concurrency APIs and event-driven microservices
-    - agentic AI, retrieval-augmented generation, LLM evaluation
-    - cloud-native infrastructure on AWS and Azure
-    - distributed storage, replication and consistency
+    - backend:     high-concurrency APIs, event-driven microservices
+    - full-stack:  React and TypeScript consoles over those services
+    - cloud:       AWS and Azure infrastructure, CI/CD, observability
+    - ai:          agentic workflows, RAG, LLM evaluation
 
   principle: |
     Design for the failure case.
@@ -312,7 +312,7 @@ results      86.3% detection accuracy
 
 ## ⬢ &nbsp;Open Endpoints
 
-Backend engineering · distributed systems · applied AI —
+Backend · full-stack · cloud · AI —
 I read every message.
 
 <a href="mailto:jyothsnagoru28@gmail.com"><img src="https://img.shields.io/badge/jyothsnagoru28@gmail.com-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white"/></a>
