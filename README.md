@@ -26,7 +26,7 @@ metadata:
   degree:   M.S. Engineering Science (Artificial Intelligence)
             University at Buffalo
 
-
+spec:
   domains:
     - backend:     high-concurrency APIs, event-driven microservices
     - full-stack:  React and TypeScript consoles over those services
