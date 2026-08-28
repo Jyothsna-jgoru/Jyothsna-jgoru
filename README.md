@@ -175,7 +175,7 @@ status:
 ## ⬢ &nbsp;Systems I've Built
 
 <details>
-<summary><b>AI SRE Copilot</b> &nbsp;—&nbsp; agentic incident diagnosis for microservices</summary>
+<summary><b>AI SRE Copilot</b> &nbsp;—&nbsp; agentic incident diagnosis for microservices &nbsp;·&nbsp; <a href="https://jyothsna-jgoru.github.io/AI-SRE-Copilot/">Live demo ↗</a></summary>
 
 <br/>
 
