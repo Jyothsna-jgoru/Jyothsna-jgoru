@@ -175,7 +175,7 @@ validated    20 concurrent clients under offline reconnect
 </details>
 
 <details>
-<summary><b>Log-Structured Distributed Key-Value Store</b> &nbsp;—&nbsp; storage internals from scratch</summary>
+<summary><b>Log-Structured Distributed Key-Value Store</b> &nbsp;—&nbsp; storage internals from scratch &nbsp;·&nbsp; <a href="https://lskv-systems-console.onrender.com/">Live demo ↗</a></summary>
 
 <br/>
 
