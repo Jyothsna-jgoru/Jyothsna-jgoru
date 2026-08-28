@@ -134,41 +134,8 @@ status:
 
 <br/>
 
-## ⬢ &nbsp;Deployment Log
-
-```
-2026-01 ─────▶  capital-one/transaction-platform                    [ ACTIVE ]
-                Java · Spring Boot · Hibernate · Kafka · AWS · Bedrock
-
-                ↳ high-concurrency transaction APIs; Kafka event flows
-                  and WebSocket updates          ── 25% lower latency
-                ↳ OpenTelemetry + Prometheus + Grafana
-                                                 ── 20% lower P95
-                ↳ OAuth 2.0 / JWT / RBAC under PCI DSS-aligned controls
-                ↳ Terraform-provisioned EC2 and Lambda
-                                                 ── 40% faster provisioning
-                ↳ Bedrock LLM incident assistant with audited MCP access
 
 
-2022-08 ─────▶  zomato/order-tracking-and-ops                   [ 2 YEARS ]
-                Java · Node.js · FastAPI · Kafka · Redis · AKS
-
-                ↳ real-time order tracking at        ── 15K+ peak RPS
-                ↳ polyglot data layer, Cosmos DB + Redis + PostgreSQL
-                                                     ── 92% cache-hit rate
-                ↳ Kafka + SSE + WebSocket fanout     ── 30% less polling
-                ↳ AKS with HPA autoscaling           ── 99.9% availability
-                ↳ Jenkins CI/CD with health-checked rollbacks
-                                                     ── 20% fewer release issues
-
-
-2022-01 ─────▶  healthplix/triage-ops                          [ 6 MONTHS ]
-                Java · Spring Boot · React · AWS · Jenkins
-
-                ↳ real-time triage dashboard         ── 40% faster decisions
-                ↳ event-driven AWS microservices     ── 28% better P99
-                ↳ CloudWatch dashboards + runbooks   ── MTTR 25 → 15 min
-```
 
 <br/>
 
