@@ -142,6 +142,21 @@ status:
 ## ⬢ &nbsp;Systems I've Built
 
 <details>
+<summary><b>Enterprise Multi-Agent SDLC Automation Platform</b> &nbsp;·&nbsp; <a href="https://jyothsna-jgoru.github.io/forgeguard-ai/">Live demo ↗</a></summary>
+
+<br/>
+
+**ForgeGuard AI** demonstrates a governed ticket-to-pull-request workflow: planning, repository analysis, proposed changes, validation, security review, documentation, and human approval. A deny-by-default MCP-style gateway enforces role-scoped tool access and records policy decisions.
+
+Explore ready-made tickets, replay the agent stages, inspect a Spring Boot sample diff, and approve a simulated draft pull request. The public experience runs in the browser without sign-in or repository access; external integrations remain simulated.
+
+[Source code ↗](https://github.com/Jyothsna-jgoru/forgeguard-ai)
+
+`React` `TypeScript` `FastAPI` `LangGraph` `MCP` `Local RAG` `PostgreSQL` `Docker` `GitHub Actions`
+
+</details>
+
+<details>
 <summary><b>AI SRE Copilot</b> &nbsp;—&nbsp; agentic incident diagnosis for microservices &nbsp;·&nbsp; <a href="https://jyothsna-jgoru.github.io/AI-SRE-Copilot/">Live demo ↗</a></summary>
 
 <br/>
