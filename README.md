@@ -174,7 +174,7 @@ validated    20 RPS at the API orchestration layer
 </details>
 
 <details>
-<summary><b>Real-Time Collaborative Editor</b> &nbsp;—&nbsp; op-based sequence CRDT</summary>
+<summary><b>Real-Time Collaborative Editor</b> &nbsp;—&nbsp; op-based sequence CRDT &nbsp;·&nbsp; <a href="https://convergepad-live-crdt.supersoldier048.chatgpt.site/try">Live demo ↗</a></summary>
 
 <br/>
 
