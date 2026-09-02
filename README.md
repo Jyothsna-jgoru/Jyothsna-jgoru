@@ -142,7 +142,7 @@ status:
 ## ⬢ &nbsp;Systems I've Built
 
 <details>
-<summary><b>JDG GenAI Lyric-to-Chord Studio</b> &nbsp;—&nbsp; editable, playable lyric-to-harmony generation &nbsp;·&nbsp; <a href="https://github.com/Jyothsna-jgoru/jdg-genai-lyric-chord-studio">GitHub project ↗</a></summary>
+<summary><b>JDG GenAI Lyric-to-Chord Studio</b> &nbsp;—&nbsp; editable, playable lyric-to-harmony generation &nbsp;·&nbsp; <a href="https://jdg-genai-lyric-chord-studio.onrender.com/">Live demo ↗</a></summary>
 
 <br/>
 
