@@ -142,6 +142,24 @@ status:
 ## ⬢ &nbsp;Systems I've Built
 
 <details>
+<summary><b>JDG GenAI Lyric-to-Chord Studio</b> &nbsp;—&nbsp; editable, playable lyric-to-harmony generation &nbsp;·&nbsp; <a href="https://github.com/Jyothsna-jgoru/jdg-genai-lyric-chord-studio">GitHub project ↗</a></summary>
+
+<br/>
+
+Transforms original lyrics and musical controls into editable chord sheets, lyric-shaped melody playback, transposition, project history, and TXT, JSON, PDF, and MIDI exports. A FLAN-T5-small sequence-to-sequence path loads a trained PEFT LoRA adapter, while strict schema validation and a music-theory constraint engine keep every playable result structurally valid and expose its generation provenance.
+
+```
+verified      20 automated tests across API, model, theory, playback and exports
+trained       344,064 LoRA parameters with reproducible evaluation artifacts
+```
+
+[Source code ↗](https://github.com/Jyothsna-jgoru/jdg-genai-lyric-chord-studio)
+
+`Python` `FastAPI` `PyTorch` `FLAN-T5` `PEFT LoRA` `Web Audio` `SQLite` `Docker` `GitHub Actions`
+
+</details>
+
+<details>
 <summary><b>Enterprise Multi-Agent SDLC Automation Platform</b> &nbsp;·&nbsp; <a href="https://jyothsna-jgoru.github.io/forgeguard-ai/">Live demo ↗</a></summary>
 
 <br/>
