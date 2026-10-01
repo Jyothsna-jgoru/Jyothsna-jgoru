@@ -16,30 +16,18 @@
 
 <br/>
 
-```yaml
-apiVersion: engineer/v1
-kind: SoftwareEngineer
+<div align="center">
 
-metadata:
-  name:     jyothsna-devi-goru
-  location: United States
-  degree:   M.S. Engineering Science (Artificial Intelligence)
-            University at Buffalo
+<table>
+<tr>
+<td valign="top" width="380"><img src="assets/portrait.svg" width="370" alt="ASCII portrait"/></td>
+<td valign="top" width="540"><img src="assets/info-card.svg" width="520" alt="Profile summary"/></td>
+</tr>
+</table>
 
-spec:
-  domains:
-    - backend:     high-concurrency APIs, event-driven microservices
-    - full-stack:  React and TypeScript consoles over those services
-    - cloud:       AWS and Azure infrastructure, CI/CD, observability
-    - ai:          agentic workflows, RAG, LLM evaluation
+<i>Design for the failure case. The happy path takes care of itself.</i>
 
-  principle: |
-    Design for the failure case.
-    The happy path takes care of itself.
-
-status:
-  availability: open to conversations
-```
+</div>
 
 <br/>
 
@@ -301,7 +289,10 @@ trained       344,064 LoRA parameters with reproducible evaluation artifacts
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Jyothsna-jgoru&show_icons=true&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=9AA4BB&icon_color=38BDF8" alt="GitHub stats"/>
+<img src="assets/contrib-heatmap.svg" width="880" alt="Contribution heatmap"/>
+
+<br/><br/>
+
 <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jyothsna-jgoru&layout=compact&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=9AA4BB" alt="Top languages"/>
 
 </div>
