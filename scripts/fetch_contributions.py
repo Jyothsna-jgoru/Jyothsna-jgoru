@@ -26,6 +26,11 @@ CELL = re.compile(r"<td[^>]*data-date=[\"'][^\"']+[\"'][^>]*>", re.I)
 DATE = re.compile(r"data-date=[\"']([^\"']+)[\"']")
 LEVEL = re.compile(r"data-level=[\"'](\d)[\"']")
 TOTAL = re.compile(r"([\d,]+)\s*\n?\s*contributions", re.I)
+# Exact per-day counts live in <tool-tip for="<td id>">N contributions on …</tool-tip>.
+# The renderer adds LeetCode submissions to these, so it needs counts, not levels.
+CELL_ID = re.compile(r"\bid=[\"']([^\"']+)[\"']")
+TOOLTIP = re.compile(r"<tool-tip[^>]*\bfor=[\"']([^\"']+)[\"'][^>]*>([^<]*)</tool-tip>", re.I)
+COUNT = re.compile(r"^\s*([\d,]+)\s+contribution", re.I)
 
 
 def fetch(url: str) -> str:
@@ -44,12 +49,20 @@ def fetch(url: str) -> str:
 def main() -> None:
     html_text = fetch(URL)
 
+    tips = {cid: text for cid, text in TOOLTIP.findall(html_text)}
+
     days = []
     for cell in CELL.findall(html_text):
         date = DATE.search(cell)
         level = LEVEL.search(cell)
         if date and level:
-            days.append({"date": date.group(1), "level": int(level.group(1))})
+            day = {"date": date.group(1), "level": int(level.group(1))}
+            cell_id = CELL_ID.search(cell)
+            tip = tips.get(cell_id.group(1)) if cell_id else None
+            if tip is not None:
+                count = COUNT.search(tip)
+                day["count"] = int(count.group(1).replace(",", "")) if count else 0
+            days.append(day)
 
     if not days:
         raise SystemExit(

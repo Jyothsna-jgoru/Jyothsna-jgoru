@@ -25,11 +25,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      # fetch_contributions.py and render_heatmap_svg.py use only the standard
+      # The fetch and render scripts use only the standard
       # library, so there is nothing to install and no secret to configure:
-      # /users/<login>/contributions is public.
+      # /users/<login>/contributions and LeetCode's userCalendar are public.
       - name: Fetch contributions
         run: python scripts/fetch_contributions.py "${{ github.repository_owner }}"
+
+      # LeetCode can refuse CI runners; if it does, keep yesterday's
+      # data/leetcode.json and still render the heatmap.
+      - name: Fetch LeetCode submissions
+        continue-on-error: true
+        run: python scripts/fetch_leetcode.py Jyothsna_G
 
       - name: Render heatmap
         run: python scripts/render_heatmap_svg.py
@@ -38,4 +44,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Refresh contribution heatmap [skip ci]"
-          file_pattern: data/contributions.json assets/contrib-heatmap.svg
+          file_pattern: data/contributions.json data/leetcode.json assets/contrib-heatmap.svg

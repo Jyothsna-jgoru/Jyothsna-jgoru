@@ -1,5 +1,10 @@
 """
-Render data/contributions.json as an animated contribution heatmap SVG.
+Render GitHub contributions + LeetCode submissions as one animated heatmap SVG.
+
+Each day's square is shaded by the sum of both counts, so coding on either
+platform shows up in the same grid. The tooltip on a square breaks the day
+down by source. data/leetcode.json is optional; without it the grid is
+GitHub-only.
 
 Squares reveal on a diagonal sweep (delay scales with week + weekday) so the
 grid fills left to right, then freezes. Month labels and a legend match
@@ -13,6 +18,7 @@ import json
 import pathlib
 
 SRC = pathlib.Path("data/contributions.json")
+LEETCODE = pathlib.Path("data/leetcode.json")
 OUT = pathlib.Path("assets/contrib-heatmap.svg")
 
 CELL = 11          # square size
@@ -33,18 +39,51 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 
+def level_for(count: int, thresholds: list) -> int:
+    if count <= 0:
+        return 0
+    return 1 + sum(1 for t in thresholds if count > t)
+
+
+def merge(data: dict, leetcode: dict) -> list:
+    """Return [{date, github, leetcode, total, level}] over GitHub's window."""
+    lc_counts = leetcode.get("counts", {})
+    days = []
+    for day in data["days"]:
+        # Older contributions.json files carry only levels; treat a level as
+        # that many contributions so the merge still degrades sensibly.
+        gh = day.get("count", day["level"])
+        lc = lc_counts.get(day["date"], 0)
+        days.append({"date": day["date"], "github": gh, "leetcode": lc,
+                     "total": gh + lc})
+
+    # Quartiles of the non-zero days, like GitHub's own shading.
+    active = sorted(d["total"] for d in days if d["total"] > 0)
+    thresholds = [active[len(active) * q // 4] for q in (1, 2, 3)] if active else []
+    for d in days:
+        d["level"] = level_for(d["total"], thresholds)
+    return days
+
+
 def build() -> str:
     data = json.loads(SRC.read_text(encoding="utf-8"))
-    days = data["days"]
+    leetcode = (
+        json.loads(LEETCODE.read_text(encoding="utf-8"))
+        if LEETCODE.exists() else {}
+    )
+    days = merge(data, leetcode)
 
     first = dt.date.fromisoformat(days[0]["date"])
     # GitHub weeks start on Sunday; pad so the first column aligns.
     lead = (first.weekday() + 1) % 7
 
-    cells = []  # (week, weekday, level, date)
+    cells = []  # (week, weekday, level, date, tooltip)
     for i, day in enumerate(days):
         slot = lead + i
-        cells.append((slot // 7, slot % 7, day["level"], day["date"]))
+        tip = f"{day['date']}: {day['github']} GitHub"
+        if leetcode:
+            tip += f" + {day['leetcode']} LeetCode"
+        cells.append((slot // 7, slot % 7, day["level"], day["date"], tip))
 
     weeks = max(c[0] for c in cells) + 1
     width = LEFT + weeks * (CELL + GAP) + PAD
@@ -53,7 +92,7 @@ def build() -> str:
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" '
-        f'aria-label="GitHub contribution heatmap">',
+        f'aria-label="Combined GitHub and LeetCode activity heatmap">',
         "<style>",
         "  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;"
         "          font-size: 9px; fill: %s; }" % TEXT,
@@ -73,7 +112,7 @@ def build() -> str:
 
     # month labels, printed when a month first appears
     seen = set()
-    for week, weekday, _level, date in cells:
+    for week, weekday, _level, date, _tip in cells:
         d = dt.date.fromisoformat(date)
         if d.month not in seen and d.day <= 7:
             seen.add(d.month)
@@ -85,7 +124,7 @@ def build() -> str:
         out.append(f'<text class="mono" x="4" y="{y}">{label}</text>')
 
     # squares — transform-box/origin keep the scale animation centred
-    for week, weekday, level, date in cells:
+    for week, weekday, level, date, tip in cells:
         x = LEFT + week * (CELL + GAP)
         y = TOP + weekday * (CELL + GAP)
         delay = 0.15 + (week * 0.012) + (weekday * 0.008)
@@ -94,22 +133,27 @@ def build() -> str:
             f'fill="{COLORS[level]}" '
             f'style="animation-delay:{delay:.2f}s; transform-box:fill-box; '
             f'transform-origin:center">'
-            f"<title>{date}: level {level}</title></rect>"
+            f"<title>{tip}</title></rect>"
         )
 
     # footer: totals on the left, legend on the right
     base_y = TOP + 7 * (CELL + GAP) + 18
-    total = data.get("total")
-    summary = (
-        f"{total} contributions in the last year"
-        if total is not None
-        else f"{data['active_days']} active days"
-    )
+    gh_total = sum(d["github"] for d in days)
+    lc_total = sum(d["leetcode"] for d in days)
+    summary = f"{gh_total + lc_total} contributions in the last year"
+    if leetcode:
+        summary += f" &#183; {gh_total} GitHub + {lc_total} LeetCode"
     out.append(f'<text class="mono" x="{LEFT}" y="{base_y}">{summary}</text>')
+
+    best = run = 0
+    for d in days:
+        run = run + 1 if d["total"] > 0 else 0
+        best = max(best, run)
+    active_days = sum(1 for d in days if d["total"] > 0)
     out.append(
         f'<text class="mono" x="{LEFT}" y="{base_y + 13}">'
-        f"longest streak: {data['longest_streak']} days &#183; "
-        f"active: {data['active_days']} of {len(days)}</text>"
+        f"longest streak: {best} days &#183; "
+        f"active: {active_days} of {len(days)}</text>"
     )
 
     legend_x = width - PAD - (len(COLORS) * (CELL + GAP)) - 34

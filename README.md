@@ -289,7 +289,7 @@ trained       344,064 LoRA parameters with reproducible evaluation artifacts
 
 <div align="center">
 
-<img src="assets/contrib-heatmap.svg" width="880" alt="Contribution heatmap"/>
+<img src="assets/contrib-heatmap.svg" width="880" alt="Combined GitHub and LeetCode activity heatmap"/>
 
 <br/><br/>
 
