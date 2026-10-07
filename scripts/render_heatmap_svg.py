@@ -138,11 +138,7 @@ def build() -> str:
 
     # footer: totals on the left, legend on the right
     base_y = TOP + 7 * (CELL + GAP) + 18
-    gh_total = sum(d["github"] for d in days)
-    lc_total = sum(d["leetcode"] for d in days)
-    summary = f"{gh_total + lc_total} contributions in the last year"
-    if leetcode:
-        summary += f" &#183; {gh_total} GitHub + {lc_total} LeetCode"
+    summary = f"{sum(d['total'] for d in days)} contributions in the last year"
     out.append(f'<text class="mono" x="{LEFT}" y="{base_y}">{summary}</text>')
 
     best = run = 0
