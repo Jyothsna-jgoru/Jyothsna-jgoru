@@ -57,7 +57,7 @@
 <rect class="d" x="72" y="108" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.23s; transform-box:fill-box; transform-origin:center"><title>2025-11-29: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="86" y="24" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.20s; transform-box:fill-box; transform-origin:center"><title>2025-11-30: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="86" y="38" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.21s; transform-box:fill-box; transform-origin:center"><title>2025-12-01: 0 GitHub + 0 LeetCode</title></rect>
-<rect class="d" x="86" y="52" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.21s; transform-box:fill-box; transform-origin:center"><title>2025-12-02: 1 GitHub + 0 LeetCode</title></rect>
+<rect class="d" x="86" y="52" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.21s; transform-box:fill-box; transform-origin:center"><title>2025-12-02: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="86" y="66" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.22s; transform-box:fill-box; transform-origin:center"><title>2025-12-03: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="86" y="80" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.23s; transform-box:fill-box; transform-origin:center"><title>2025-12-04: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="86" y="94" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.24s; transform-box:fill-box; transform-origin:center"><title>2025-12-05: 0 GitHub + 0 LeetCode</title></rect>
@@ -169,7 +169,7 @@
 <rect class="d" x="296" y="108" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.43s; transform-box:fill-box; transform-origin:center"><title>2026-03-21: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="310" y="24" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.39s; transform-box:fill-box; transform-origin:center"><title>2026-03-22: 0 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="310" y="38" width="11" height="11" rx="2.5" fill="#161b22" style="animation-delay:0.40s; transform-box:fill-box; transform-origin:center"><title>2026-03-23: 0 GitHub + 0 LeetCode</title></rect>
-<rect class="d" x="310" y="52" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.41s; transform-box:fill-box; transform-origin:center"><title>2026-03-24: 16 GitHub + 0 LeetCode</title></rect>
+<rect class="d" x="310" y="52" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.41s; transform-box:fill-box; transform-origin:center"><title>2026-03-24: 15 GitHub + 0 LeetCode</title></rect>
 <rect class="d" x="310" y="66" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.41s; transform-box:fill-box; transform-origin:center"><title>2026-03-25: 0 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="310" y="80" width="11" height="11" rx="2.5" fill="#26a641" style="animation-delay:0.42s; transform-box:fill-box; transform-origin:center"><title>2026-03-26: 0 GitHub + 2 LeetCode</title></rect>
 <rect class="d" x="310" y="94" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.43s; transform-box:fill-box; transform-origin:center"><title>2026-03-27: 0 GitHub + 1 LeetCode</title></rect>
@@ -325,7 +325,7 @@
 <rect class="d" x="618" y="38" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.66s; transform-box:fill-box; transform-origin:center"><title>2026-08-24: 12 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="618" y="52" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.67s; transform-box:fill-box; transform-origin:center"><title>2026-08-25: 0 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="618" y="66" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.68s; transform-box:fill-box; transform-origin:center"><title>2026-08-26: 2 GitHub + 1 LeetCode</title></rect>
-<rect class="d" x="618" y="80" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.69s; transform-box:fill-box; transform-origin:center"><title>2026-08-27: 3 GitHub + 1 LeetCode</title></rect>
+<rect class="d" x="618" y="80" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.69s; transform-box:fill-box; transform-origin:center"><title>2026-08-27: 0 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="618" y="94" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.69s; transform-box:fill-box; transform-origin:center"><title>2026-08-28: 22 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="618" y="108" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.70s; transform-box:fill-box; transform-origin:center"><title>2026-08-29: 0 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="632" y="24" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.67s; transform-box:fill-box; transform-origin:center"><title>2026-08-30: 0 GitHub + 1 LeetCode</title></rect>
@@ -394,9 +394,10 @@
 <rect class="d" x="758" y="24" width="11" height="11" rx="2.5" fill="#26a641" style="animation-delay:0.77s; transform-box:fill-box; transform-origin:center"><title>2026-11-01: 1 GitHub + 1 LeetCode</title></rect>
 <rect class="d" x="758" y="38" width="11" height="11" rx="2.5" fill="#39d353" style="animation-delay:0.78s; transform-box:fill-box; transform-origin:center"><title>2026-11-02: 1 GitHub + 5 LeetCode</title></rect>
 <rect class="d" x="758" y="52" width="11" height="11" rx="2.5" fill="#26a641" style="animation-delay:0.79s; transform-box:fill-box; transform-origin:center"><title>2026-11-03: 1 GitHub + 1 LeetCode</title></rect>
-<rect class="d" x="758" y="66" width="11" height="11" rx="2.5" fill="#0e4429" style="animation-delay:0.80s; transform-box:fill-box; transform-origin:center"><title>2026-11-04: 0 GitHub + 1 LeetCode</title></rect>
-<text class="mono" x="30" y="140">475 contributions in the last year</text>
-<text class="mono" x="30" y="153">longest streak: 42 days &#183; active: 192 of 368</text>
+<rect class="d" x="758" y="66" width="11" height="11" rx="2.5" fill="#26a641" style="animation-delay:0.80s; transform-box:fill-box; transform-origin:center"><title>2026-11-04: 1 GitHub + 1 LeetCode</title></rect>
+<rect class="d" x="758" y="80" width="11" height="11" rx="2.5" fill="#26a641" style="animation-delay:0.81s; transform-box:fill-box; transform-origin:center"><title>2026-11-05: 0 GitHub + 2 LeetCode</title></rect>
+<text class="mono" x="30" y="140">473 contributions in the last year</text>
+<text class="mono" x="30" y="153">longest streak: 42 days &#183; active: 192 of 369</text>
 <text class="mono" x="642" y="140">Less</text>
 <rect x="668" y="131" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="682" y="131" width="11" height="11" rx="2.5" fill="#0e4429"/>
